@@ -1,5 +1,7 @@
+- [Go back](README.md)
+
 # Making Makefiles
-Stephen Hamilton
+Stephen Hamilton  
 2-28-2023
 
 - [Making Makefiles](#making-makefiles)
@@ -130,3 +132,5 @@ clean:
 ```
 This target simply deletes any build artifacts -
 or anything created by the compiling or linking commands. 
+
+- [Go back](README.md)
