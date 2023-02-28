@@ -1,4 +1,4 @@
-- [Go back](../README.md)
+- [Go back](README.md)
 
 # Freeing Pointers
 Stephen Hamilton
@@ -26,4 +26,4 @@ free(memory);
 memory = NULL;
 ```
 
-- [Go back](../README.md)
+- [Go back](README.md)
