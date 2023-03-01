@@ -4,6 +4,11 @@
 When contributing your notes, first make sure they are in `.md` files.
 If you don't know Markdown, it's easy! Just take a look at
 [this handy cheatsheet!](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+VS Code can write in Markdown and give you a live preview by clicking on this icon in
+the top right:
+
+![Markdown Preview Icon](https://user-images.githubusercontent.com/60950821/222203401-9f424b49-dea1-4d4b-9023-34980046ad05.png)
+
 
 **Make sure your notes do not violate the honor code. You may share your knowledge, but you
 will not share answers to homework, tests, or projects.** This does not mean you cannot
