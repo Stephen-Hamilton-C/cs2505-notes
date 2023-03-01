@@ -98,7 +98,7 @@ zipData.o: zipData.c
 	gcc ${GCC_OPTS} -c zipData.c
 ```
 Here, the target `main.o` depends on the file `main.c`.
-So, if `main.c` was changed since the last time `main.o`,
+So, if `main.c` was changed since the last time `main.o` was changed, 
 then the rules for `main.o` will be run.
 
 The command here is just the compile step, indicated by the `-c`,
