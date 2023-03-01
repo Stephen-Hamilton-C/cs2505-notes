@@ -13,6 +13,9 @@ We'll be happy to take in your knowledge to share.
 Just make sure to take a look at [Contributing.md](CONTRIBUTING.md) for
 guidelines on how to integrate your notes into this repo.
 
+If you are new to Github and don't know how to make a Pull Request,
+you can also just [open an Issue](https://github.com/Stephen-Hamilton-C/cs2505-notes/issues/new) with your notes
+
 ## License
 These notes have no license - they are completely in the open domain!
 Feel free to download these notes, edit them, add to them,
