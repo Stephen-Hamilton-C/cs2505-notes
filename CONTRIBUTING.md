@@ -5,6 +5,11 @@ When contributing your notes, first make sure they are in `.md` files.
 If you don't know Markdown, it's easy! Just take a look at
 [this handy cheatsheet!](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
+**Make sure your notes do not violate the honor code. You may share your knowledge, but you
+will not share answers to homework, tests, or projects.** This does not mean you cannot
+provide notes that can help fellow students figure out answers, but sending in direct answers
+will not be tolerated.
+
 Then make sure to put the files in the correct week that they are relevant to.
 These folders have the format `week-#`, where `#` is the week number.
 You can see which week we're on in Canvas under Pages -> Topics
