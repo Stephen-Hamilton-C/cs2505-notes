@@ -2,5 +2,6 @@
 
 - [Returning by Pointer](return-by-pointer.md) - Stephen Hamilton
 - [Extending Variable Lifetime with Static](extend-lifetime-with-static.md) - Stephen Hamilton
+- [Pointers](pointers.md) - Stephen Hamilton
 
 - [Go back](../README.md)
