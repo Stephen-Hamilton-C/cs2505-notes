@@ -82,6 +82,9 @@ This is the target's **rules**.
 Rules are, as explained earlier, a list of commands.
 For `project1`, this is only one command - the linking command.
 It links the object files into the project1 executable.
+Rules *always* have a tab character before them, not spaces.
+If you copy the Makefile in this guide, make sure to set VS Code
+to tabs and then replace the spaces with tabs.
 
 These rules will only be run if the dependencies needed to run or have changed.
 
