@@ -1,4 +1,9 @@
+- [Go back](README.md)
+
 # Copying Strings
+Stephen Hamilton
+3-3-2023
+
 In C, you can't assign an array to an array.
 ```c
 char array1[] = "Hello!";
@@ -57,3 +62,5 @@ array2: Hello!
 array1: dog
 array2: Hello!
 ```
+
+- [Go back](README.md)
