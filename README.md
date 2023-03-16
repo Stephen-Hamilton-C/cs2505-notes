@@ -6,6 +6,7 @@ who are in CS2505 Intro to Computer Organization.
 - [Week 5](week-5/README.md)
 - [Week 6](week-6/README.md)
 - [Week 7](week-7/README.md)
+- [Week 8](week-8/README.md)
 
 ## Contributing Notes
 If you have some notes or guides that you would like to contribute,
