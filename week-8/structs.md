@@ -84,7 +84,7 @@ void printName(struct Book* book)
 ```
 
 This is terrible, and thankfully, the C developers agree.
-So they gave us **Arrow Syntax**!.
+So they gave us **Arrow Syntax**!
 Instead of dereferencing with parenthesis, we just use `->`,
 which automagically dereferences and then gets the field.
 
