@@ -1,8 +1,8 @@
 - [Go back](README.md)
 
 # String Length
-Stephen Hamilton
-3-16-2023
+> Stephen Hamilton  
+> 3-16-2023
 
 You can get the length of a string using the `strlen` function in the `string.h` library.
 Note that this function will only work for strings that have the null terminator at the end.

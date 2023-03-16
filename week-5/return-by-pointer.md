@@ -1,6 +1,9 @@
 - [Go back](README.md)
 
 # Returning by Pointer
+> Stephen Hamilton  
+> 3-1-2023
+
 C can only return a single variable.
 However, there are certain cases where it's useful for a function
 to return multiple values

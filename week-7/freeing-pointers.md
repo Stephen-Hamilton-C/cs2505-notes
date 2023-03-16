@@ -1,8 +1,8 @@
 - [Go back](README.md)
 
 # Freeing Pointers
-Stephen Hamilton  
-2-28-2023
+> Stephen Hamilton  
+> 2-28-2023
 
 `malloc` will always return a pointer. However, the memory that is
 dynamically allocated with malloc must be freed manually, as

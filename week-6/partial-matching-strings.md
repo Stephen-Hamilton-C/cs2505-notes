@@ -1,6 +1,9 @@
 - [Go back](README.md)
 
 # Partial Matching Strings
+> Stephen Hamilton  
+> 3-1-2023
+
 The `string.h` library has a particularly useful function known as `strstr`.
 This function can do partial matching, which was a requirement for Project 1.
 

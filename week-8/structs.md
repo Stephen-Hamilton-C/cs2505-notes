@@ -1,8 +1,8 @@
 - [Go back](README.md)
 
 # Structs
-Stephen Hamilton
-3-16-2023
+> Stephen Hamilton  
+> 3-16-2023
 
 Structs in C are *struct*ured data.
 They're a simple way to organize a bunch of data.

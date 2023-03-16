@@ -1,6 +1,9 @@
 - [Go back](README.md)
 
 # Extending Variable Lifetime with Static
+> Stephen Hamilton  
+> 3-1-2023
+
 Let's do a quick refresher on what variable lifetime is.
 If you're already familiar with lifetime, you can skip to the
 [Static](#static) section.

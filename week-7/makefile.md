@@ -1,8 +1,8 @@
 - [Go back](README.md)
 
 # Making Makefiles
-Stephen Hamilton  
-2-28-2023
+> Stephen Hamilton  
+> 2-28-2023
 
 - [Making Makefiles](#making-makefiles)
   - [Structure](#structure)

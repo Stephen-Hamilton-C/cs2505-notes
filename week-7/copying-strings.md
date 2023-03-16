@@ -1,8 +1,8 @@
 - [Go back](README.md)
 
 # Copying Strings
-Stephen Hamilton
-3-3-2023
+> Stephen Hamilton  
+> 3-3-2023
 
 In C, you can't assign an array to an array.
 ```c

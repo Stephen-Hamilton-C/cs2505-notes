@@ -1,6 +1,9 @@
 - [Go back](README.md)
 
 # Pointers
+> Stephen Hamilton  
+> 3-1-2023
+
 A pointer is a variable that stores a **memory address**.
 The data at the memory address is the **target** of the pointer.
 To access the target, you must dereference the pointer using an asterisk `*`,
