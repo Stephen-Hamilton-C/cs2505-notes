@@ -80,11 +80,14 @@ so we must use parenthesis like this:
 void printName(struct Book* book)
 {
     printf("Book name: %s", (*book).name);
-}Y | OR
-0 0 | 0
-0 1  | 1
-1  0 | 1
-1  1  | 1
+}
+```
+
+This is terrible, and thankfully, the C developers agree.
+So they gave us **Arrow Syntax**!.
+Instead of dereferencing with parenthesis, we just use `->`,
+which automagically dereferences and then gets the field.
+
 Arrow syntax is equivalent to the above:
 ```c
 void printName(struct Book* book)
