@@ -1,17 +1,15 @@
 - [Go back](README.md)
 
-# Data Representation
-
+# Representing Numbers in Binary
 > Rick Wang  
 > 3-21-2023
 
-- [Data Representation](#data-representation)
-  - [Representing Numbers in Binary](#representing-numbers-in-binary)
-    - [Signed and Magnitude](#signed-and-magnitude)
-    - [1's Complement](#1s-complement)
-    - [2's Complement](#2s-complement)
+- [Representing Numbers in Binary](#representing-numbers-in-binary)
+  - [Signed and Magnitude](#signed-and-magnitude)
+  - [1's Complement](#1s-complement)
+  - [2's Complement](#2s-complement)
 
-## Representing Numbers in Binary
+
 In the first section we will go over different data representations and why we use 2's complement in almost if not all modern systems.
 
 Representing numbers in binary is rather straightforward, `0001` in binary is `1` in decimal, `0101` in binary is `5` in decimal. The issue is how do we represent *negative* numbers.
@@ -21,7 +19,7 @@ When designing a number representation, we want it to have the following three i
 2. Zero plus zero must equal to 0. 
 3. Negative plus its positive counterpart must equal to 0. `-15 + 15 = 0`, `4 + -4 = 0`, etc
 
-### Signed and Magnitude
+## Signed and Magnitude
 The most naive way to represent negative numbers is something called *Signed and Magnitude*, where we simply add a 1 at the most significant bit to indicate the number is negative.
 
 Example: 
@@ -35,7 +33,7 @@ The issue of this is when *a negative number and its positive counterpart are ad
 - Binary `0001 + 1001 = 1010 != 0` whereas in decimal `1 + -1 = 0`.
 - Binary `0010 0101 + 1010 0101 = 1100 1010 != 0` whereas in decimal `37 + -37 = 0`.
 
-### 1's Complement
+## 1's Complement
 The not so naive way is called *1's complement*, where for negative numbers we complement each bit of the corresponding positive number, including the sign bit.
 
 Example: 
@@ -51,7 +49,7 @@ This fixed the previous issue so adding a negative number and its positive count
 
 In this case, decimal 0 can be represented as `0000` or `1111`, meaning we can have a "positive zero" and "negative zero". Fixing this in hardware is again, pita.
 
-### 2's Complement
+## 2's Complement
 2's complement satisfies the three requirements, without the need to use extra hardware.
 
 Example:
