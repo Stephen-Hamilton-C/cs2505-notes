@@ -7,4 +7,11 @@ These Makefiles also include helpful tasks like packaging and running valgrind.
 
 - [Project 2](project2) - Stephen Hamilton
 
+## Downloading Makefiles
+Github is annoying with downloading individual files.
+To download the Makefile, first open one of the links above.
+Then, click on the button in the top right labeled `Raw`.
+This will show the entire file as plaintext in your web browser.
+Copy all of this and then paste it into a new file named `Makefile`.
+
 - [Go back](../README.md)
