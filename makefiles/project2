@@ -1,0 +1,40 @@
+# Project 2 Makefile from https://github.com/Stephen-Hamilton-C/cs2505-notes
+
+# Quick stats:
+#   Executable name:
+#     project2
+#   Tasks:
+#     clean
+#       - Removes build artifacts
+#     memcheck
+#       - Runs valgrind on commands.txt
+#     package
+#       - Creates project2_submission.tar
+
+# This Makefile will compile the Project 2 homework and create an executable called project2
+# There are three helper tasks included in this Makefile: clean, memcheck, and package
+# clean will remove all artifacts created by compiling
+# memcheck will run valgrind on commands.txt
+# package will pack your files into a tar file called "project2_submission.tar" to be submitted to canvas
+CFLAGS = -Wall -Wextra -Werror -c -g -std=c11
+
+all: project2
+
+project2: main.o comic.o
+	gcc -o project2 main.o comic.o
+
+main.o: main.c
+	gcc ${CFLAGS} main.c
+
+comic.o: comic.c comic.h
+	gcc ${CFLAGS} comic.c
+
+memcheck: project2
+	valgrind --leak-check=full ./project2 commands.txt my-output.txt
+
+clean: 
+	rm *.o project2
+
+package: project2
+	tar -cvf project2_submission.tar main.c comic.c comic.h
+
