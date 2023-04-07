@@ -1,0 +1,74 @@
+- With a base more than 9, use A-Z for the digits 10-35
+
+- Converting:
+    1) Binary-> Hex
+        a) Group chunks of 4 bits to convert to hex
+        0001 0010 0000 1010 1101 (2)
+          1   2    0    A    D (16)
+    2) Binary -> Twos compliment (Signed)
+        a) Take binary
+        b) Flip the bits, Add 1 on right side:
+    4) Twos compliment -> Binary
+        a) If left most bit is 1, then it is negative (FLIP BITS, ADD 1)
+        b) Convert as normal
+    3) Decimal -> binary / any radix 2-9
+        a) Divide by 2, set as 1 if remainder=1, stop when dividend(result) is <= 0, read backwards 
+
+
+- Data Representation in C
+    1) 8 bits is a byte
+    2) 4 bits is a nybble
+    3) Given N bits, we can store:
+        a) Pos: 0 to (2^N)-1
+        b) Signed: -(2^(N-1)) to 2^(N-1)-1
+
+- Helpful BitMasks
+    1) Force Bit to 1: OR, Desired bits: 1 (Force 1, 0001)
+    2) Force Bit to 0: AND, Desired bits: 0
+    3) Toggle Bit: XOR, Desired bits: 1
+    4) Obtain Bit: AND, Desired bits: 1
+
+- Endian:
+    1) Big-endian: MSB at lowest memory address, LSB at highest; e.g., 0x12345678 → [0x12, 0x34, 0x56, 0x78].
+    2) (LINX) Little-endian: LSB at lowest memory address, MSB at highest; e.g., 0x12345678 → [0x78, 0x56, 0x34, 0x12]. 
+
+- Creating assembly
+    1) gcc -Wall -Wextra -c -std=c11 -S bits.c -fno-asynchronous-unwind-tables -mno-red-zone
+
+===========================================================
+- Assembly Formats:
+    1) Source, Destination
+    2) (%X) = Pointer to X
+    3) $X = Constant X
+    4) %X = Register X
+    5) X(%Y) = X bytes from Y
+    6) CommandX = Command(Datatype)
+
+- Assembly Datatypes:
+    1) b = Byte (8 bits)
+    2) w = Word (16 bits)
+    3) l = Long (32 bits)
+    4) q = Quadword (POINTER, 64 bits)
+
+- Assembly Commands:
+    1) movX = Move
+    ====== Arithmetic: dest () src =======
+    2) addX = Add (dest = dest+ src)
+    3) subX = Subtract
+    4) imulX = Multiply
+    5) negX = Negate
+    6) incX/decX = Increment/Decrement
+    6) salX/sarX = Shift Left/Right (Shift in sign bit) (Force left bit to same as before)
+    7) shlX/shrX = Shift Left/Right (Shift in 0)
+
+
+
+- Assembly Prefix Zone
+    1) First instructions (ALWAYS, STACK PREFACE):
+    pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$X, %rsp
+    - RSP = Stack Pointer (Top)
+    - RBP = Base Pointer (Bottom)
+    - Stack frame = X + 8 bytes
+
