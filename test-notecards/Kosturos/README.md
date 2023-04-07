@@ -10,8 +10,10 @@ But I would not recommend using these
 Front Page = Primary, rapid access stuff
 Back Page = Secondary, random stuff
 
-===========================
+
 Not done fully yet
+
+
 ===========================
 
 - [Go back](../README.md)
