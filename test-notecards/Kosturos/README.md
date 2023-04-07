@@ -8,9 +8,7 @@ Front Page = Primary, rapid access stuff
 Back Page = Secondary, random stuff
 
 ===========================
-Status:
-- [x] Front Page
-- [x] Back Page
+Not done fully yet
 ===========================
 
 - [Go back](../README.md)
