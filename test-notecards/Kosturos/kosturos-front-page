@@ -60,10 +60,35 @@
     6) incX/decX = Increment/Decrement
     6) salX/sarX = Shift Left/Right (Shift in sign bit) (Force left bit to same as before)
     7) shlX/shrX = Shift Left/Right (Shift in 0)
+    8) movzwX = Move Zero-Extend (Move, Zero-Extend)
+    9) compX = Compare (Set flags) (dest - src)
+    10) leaX = Load Effective Address (Load address of src into dest)
+        a) 0(,%rax,4) = 0 + (%rax * 4) = Access element %rax (number) with 4 byte size
 
+- Jump Codes:
+    jmp = Unconditional Jump
+    e = Equal/0
+    ne = Not Equal/Not 0
+    s = Negative
+    ns = Not Negative
+    g/ge = >,>=
+    l/le = <,<=
+    a/ae/b/be = Unsigned >,>=,<,<=
 
+- Flags:
+    1) ZF = Zero Flag
+    2) SF = Sign Flag
+    3) OF = Overflow Flag
+    4) CF = Carry Flag
+    5) PF = Parity Flag
 
-- Assembly Prefix Zone
+- Paramater Registers:
+    1) Format: first,second,third
+        a) rdi,rsi,rdx,rcx,r8,r9
+    7) %rax = Return Value
+    8) More = Stack
+
+- Assembly Prefix
     1) First instructions (ALWAYS, STACK PREFACE):
     pushq	%rbp
 	movq	%rsp, %rbp
@@ -72,3 +97,6 @@
     - RBP = Base Pointer (Bottom)
     - Stack frame = X + 8 bytes
 
+- Assembly Pointers
+    1) D(Rb, Ri, S) = Rb + (Ri*S) + D
+        a) D = Displacement, Rb = Base, Ri = Index, S = Scale

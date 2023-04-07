@@ -6,3 +6,11 @@ compressed version to fit on a quick reference guide
 
 Front Page = Primary, rapid access stuff
 Back Page = Secondary, random stuff
+
+===========================
+Status:
+- [x] Front Page
+- [x] Back Page
+===========================
+
+- [Go back](../README.md)
