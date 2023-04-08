@@ -8,6 +8,7 @@ who are in CS2505 Intro to Computer Organization.
 - [Week 7](week-7/README.md)
 - [Week 8](week-8/README.md)
 - [Makefiles](makefiles/README.md)
+- [Test Notecards](test-notecards/README.md)
 
 ## Contributing Notes
 If you have some notes or guides that you would like to contribute,
