@@ -1,0 +1,30 @@
+===================================================================================================
+ONLY USE THESE NOTES IF YOU ARE EXTREMELY CONFIDENT WITH THE MATERIAL
+THESE NOTES OFFER NO EXPLANATIONS, ONLY RAW INFORMATION FOR MAX STORAGE EFFICIENCY
+SEE THE NORMAL FOLDER FOR A MUCH BETTER VERSION OF THESE NOTES
+===================================================================================================
+
+
+With base > 9, use A-Z for digits 10-35
+
+Conversion:
+    Binary to Hex: Group 4 bits, convert to hex
+    Binary to Twos Compliment (Signed): Flip bits, add 1 on right side
+    Twos Compliment to Binary: If leftmost bit is 1, negative (flip, add 1), otherwise convert as normal
+    Decimal to Binary/any radix 2-9: Divide by 2, stop when dividend is <= 0, read backwards
+    Data Representation in C: 8 bits = byte, 4 bits = nybble, N bits store: pos 0 to (2^N)-1, signed: -(2^(N-1)) to 2^(N-1)-1
+
+Bitmasks: OR to set bit to 1, AND to set to 0, XOR to toggle, AND to obtain
+Endian: Big-endian MSB lowest address, Little-endian LSB lowest address
+Assembly: GCC -Wall -Wextra -c -std=c11 -S bits.c -fno-asynchronous-unwind-tables -mno-red-zone
+Assembly Formats: src/dest, (%X) pointer to X, $X constant X, %X register X, X(%Y) X bytes from Y, CommandX command(datatype)
+
+Assembly Datatypes: b=byte, w=word, l=long, q=quadword
+Assembly Commands: movX, addX, subX, imulX, negX, incX/decX, salX/sarX, shlX/shrX, movzwX, compX, leaX
+Jump Codes: jmp, e=equal, ne=not equal, s=negative, ns=not negative, g/ge=>,>=, l/le=<,<=, a/ae/b/be=unsigned >,>=,<,<=
+
+Flags: ZF=Zero, SF=Sign, OF=Overflow, CF=Carry, PF=Parity
+Parameter Registers: rdi,rsi,rdx,rcx,r8,r9, %rax=return value, others on stack
+Assembly Prefix: pushq %rbp, movq %rsp %rbp, subq $X %rsp (RSP=Stack Pointer, RBP=Base Pointer, Stack frame=X+8 bytes)
+
+Assembly Pointers: D(Rb, Ri, S) = Rb + (Ri*S) + D (D=Displacement, Rb=Base, Ri=Index, S=Scale)
