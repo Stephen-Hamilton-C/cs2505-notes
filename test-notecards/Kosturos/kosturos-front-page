@@ -71,7 +71,10 @@
     9) compX = Compare (Set flags) (dest - src)
     10) leaX = Load Effective Address (Load address of src into dest)
         a) 0(,%rax,4) = 0 + (%rax * 4) = Access element %rax (number) with 4 byte size with 0 offset
+    11) The pushq source command will put the given operand on the stack and decrement the %rsp by 8 bytes
+    12) The popq destination command will store the 8 bytes above the %rsp in the destination and increment the %rsp by 8 bytes 
 
+    
 - Jump Codes:
     jmp = Unconditional Jump
     e = Equal/0
