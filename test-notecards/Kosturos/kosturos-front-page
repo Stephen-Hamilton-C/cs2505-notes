@@ -74,7 +74,7 @@
     11) The pushq source command will put the given operand on the stack and decrement the %rsp by 8 bytes
     12) The popq destination command will store the 8 bytes above the %rsp in the destination and increment the %rsp by 8 bytes 
 
-    
+
 - Jump Codes:
     jmp = Unconditional Jump
     e = Equal/0
@@ -113,6 +113,12 @@
     - RSP = Stack Pointer (Top)
     - RBP = Base Pointer (Bottom)
     - Stack frame = X + 8 bytes
+    2) Other instructions
+        a) call: stores the address of the next instruction on the stack then enters the function
+        b) pushq: pushes a pointer onto the stack so the address can be returned to later
+        c) popq removes a pointer from the top of the stack so it can be returned to
+        d) leave: sets %rsp to %rbp, then pops the top of the stack into %rbp
+        e) ret: pops the top of the stack into %rip (sets the address of the next instruction)
 
 - Assembly Pointers
     1) D(Rb, Ri, S) = Rb + (Ri*S) + D
