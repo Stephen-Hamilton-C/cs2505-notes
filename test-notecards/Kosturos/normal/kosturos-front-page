@@ -63,7 +63,7 @@
     8) movzwX = Move Zero-Extend (Move, Zero-Extend)
     9) compX = Compare (Set flags) (dest - src)
     10) leaX = Load Effective Address (Load address of src into dest)
-        a) 0(,%rax,4) = 0 + (%rax * 4) = Access element %rax (number) with 4 byte size
+        a) 0(,%rax,4) = 0 + (%rax * 4) = Access element %rax (number) with 4 byte size with 0 offset
 
 - Jump Codes:
     jmp = Unconditional Jump
