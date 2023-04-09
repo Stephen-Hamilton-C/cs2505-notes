@@ -54,6 +54,7 @@ display x = show x
 No symbol table is loaded. = Forgot -g
 
 All undefined function calls = Assumed int
+Designer of computer arch: John Von Neuman, Processor based off of: Intel 8086
 Cannot return arrays, must return pointer
 Pass by copy
 Strings auto pass as pointers
@@ -80,4 +81,6 @@ Only runs when dependency>target.
 If last bash command was good, if [[ $? -eq 0 ]]; then  
 First line = The path to the interpreter. (chmod +x <file> to go)
 
-
+| = C OR statement
+&& = C and statement
+^ = C xor statement
