@@ -1,0 +1,55 @@
+ssh <user>@<host>
+man <term> - manual page for <term>
+cd or cd ~ = cd $HOME
+Root = /
+pipe = | = redirect output to another command
+cat = print or cat more/less (Less is more)
+apropos = search for a command
+tar -cfv <out> <files>
+mv <source> <dest>
+cp <^> <^>
+rm -rf -i (i=sure?, r=recursive, f=force)
+
+UGO               -  WRE
+User, Group, Other   421
+chmod (W+R+E)[421] <file> (W+R=6)
+
+Int: 32 %d
+Short: 16 
+Long: 64
+Float: 32 %f
+Double: 64 %lf
+Char: 8 %c
+String: %s
+8Bit=Byte
+
+STD in, out, err
+
+gcc
+-g = debug
+-lm = math
+a.out = default
+PreCompiler-Compiler-Assembler-Linker
+
+#include, ""=Local <>=Global(GCC)
+stack = non dynamic
+heap = dynamic (MALLOC)
+Variables start with A-Z/_
+Variables end with A-Z/0-9/_
+
+GBD ./exe to start
+r=run <args>
+to break <file:line>/func
+bt/backtrace = find crash
+s = step into
+n = step over
+list = show code
+display x = show x
+
+All undefined function calls = Assumed int
+Cannot return arrays, must return pointer
+Pass by copy
+Strings auto pass as pointers
+Identifiers = Structs,Enums (var names)
+Static = Global to file
+Main structure = int main(int argc, char *argv[]){} - argc = # of args, argv = array of args
