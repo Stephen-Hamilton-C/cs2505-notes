@@ -10,6 +10,8 @@ mv <source> <dest>
 cp <^> <^>
 ls = list (-a = all(hidden), -l = long, -h = human readable)
 rm -rf -i (i=sure?, r=recursive, f=force)
+> = redirect to file 
+>> = append to file
 
 UGO               -  WRE
 User, Group, Other   421
@@ -32,8 +34,10 @@ gcc
 -lm = math
 a.out = default
 PreCompiler-Compiler-Assembler-Linker
+cpp-cc-as-ld
 
 #include, ""=Local <>=Global(GCC)
+(#) = PreProcessor
 stack = non dynamic
 heap = dynamic (MALLOC)
 Variables start with A-Z/_
@@ -56,6 +60,14 @@ Strings auto pass as pointers
 Identifiers = Structs,Enums (var names)
 Static = Global to file
 Main structure = int main(int argc, char *argv[]){} - argc = # of args, argv = array of args
+
+dereference/value = *x
+address = &x
+pointer casting = (int *)x 
+To get X bytes of a pointer: *(uintX_t *)p 
+    p = pointer, uintX_t = type(uint8_t)
+EX: uint64_t = 64 bits = 8 bytes = 16 nibbles
+
 
 scope = legal to use names
 lifetime = time in memory

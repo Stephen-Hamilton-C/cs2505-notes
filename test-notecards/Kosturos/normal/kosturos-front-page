@@ -13,6 +13,7 @@
         b) Convert as normal
     3) Decimal -> binary / any radix 2-9
         a) Divide by 2, set as 1 if remainder=1, stop when dividend(result) is <= 0, read backwards 
+        b) For radix >2, do the same but take (remainder * radix) as the digit to write down (rounded)
 
 
 - Data Representation in C
@@ -100,3 +101,10 @@
 - Assembly Pointers
     1) D(Rb, Ri, S) = Rb + (Ri*S) + D
         a) D = Displacement, Rb = Base, Ri = Index, S = Scale
+
+- Basic Memory Stack
+    1) Program Object Code
+    2) Program Data
+    3) OS Object Code
+    4) OS Data
+    5) Stack (Runtime)
