@@ -5,12 +5,13 @@
         a) Group chunks of 4 bits to convert to hex
         0001 0010 0000 1010 1101 (2)
           1   2    0    A    D (16)
-    2) Binary -> Twos compliment (Signed)
+    2) Binary -> Twos compliment (Signed, negative)
         a) Take binary
-        b) Flip the bits, Add 1 on right side:
+        b) Flip the bits
+        c) Add 1 on right side (+, no new bits)
     4) Twos compliment -> Binary
         a) If left most bit is 1, then it is negative (FLIP BITS, ADD 1)
-        b) Convert as normal
+        b) If left most bit is 0, then treat it as normal binary
     3) Decimal -> binary / any radix 2-9
         a) Divide by 2, set as 1 if remainder=1, stop when dividend(result) is <= 0, read backwards 
         b) For radix >2, do the same but take (remainder * radix) as the digit to write down (rounded)
@@ -22,6 +23,8 @@
     3) Given N bits, we can store:
         a) Pos: 0 to (2^N)-1
         b) Signed: -(2^(N-1)) to 2^(N-1)-1
+    4) X<<Y = X * 2^Y
+    5) X>>Y = X / 2^Y (ONLY POSITIVE)
 
 - Helpful BitMasks
     1) Force Bit to 1: OR, Desired bits: 1 (Force 1, 0001)
@@ -41,7 +44,7 @@
     1) Source, Destination
     2) (%X) = Pointer to X
     3) $X = Constant X
-    4) %X = Register X
+    4) %X = Register X (Value)
     5) X(%Y) = X bytes from Y
     6) CommandX = Command(Datatype)
 
@@ -53,7 +56,8 @@
 
 - Assembly Commands:
     1) movX = Move
-    ====== Arithmetic: dest () src =======
+    ====== Arithmetic: dest = dest () src =======
+             Format: Source, Destination
     2) addX = Add (dest = dest+ src)
     3) subX = Subtract
     4) imulX = Multiply
@@ -61,7 +65,9 @@
     6) incX/decX = Increment/Decrement
     6) salX/sarX = Shift Left/Right (Shift in sign bit) (Force left bit to same as before)
     7) shlX/shrX = Shift Left/Right (Shift in 0)
+        a) For shifts, its source << dest (dest = shift amount)
     8) movzwX = Move Zero-Extend (Move, Zero-Extend)
+        a) Move first two bytes, zero extend to 4 bytes
     9) compX = Compare (Set flags) (dest - src)
     10) leaX = Load Effective Address (Load address of src into dest)
         a) 0(,%rax,4) = 0 + (%rax * 4) = Access element %rax (number) with 4 byte size with 0 offset
@@ -84,10 +90,17 @@
     5) PF = Parity Flag
 
 - Paramater Registers:
-    1) Format: first,second,third
+    1) Format: first,second,third params
         a) rdi,rsi,rdx,rcx,r8,r9
     7) %rax = Return Value
     8) More = Stack
+
+- Top Registers:
+    1) 16 bit: e(a-d)x esi esp ebp
+        a) esp = Stack Pointer, ebp = Base Pointer
+    2) 64 bit: r(a-d)x rsi rsp rbp
+        b) ebp/rbp = General Purpose Register
+    
 
 - Assembly Prefix
     1) First instructions (ALWAYS, STACK PREFACE):
