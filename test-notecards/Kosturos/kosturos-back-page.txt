@@ -1,0 +1,86 @@
+ssh <user>@<host>
+man <term> - manual page for <term>
+cd or cd ~ = cd $HOME
+Root = /
+pipe = | = redirect output to another command
+cat = print or cat more/less (Less is more)
+apropos = search for a command
+tar -cfv <out> <files>
+mv <source> <dest>
+cp <^> <^>
+ls = list (-a = all(hidden), -l = long, -h = human readable)
+rm -rf -i (i=sure?, r=recursive, f=force)
+> = redirect to file 
+>> = append to file
+
+UGO               -  WRE
+User, Group, Other   421
+chmod (W+R+E)[421] <file> (W+R=6)
+
+Int: 32 %d
+Short: 16 
+Long: 64
+Float: 32 %f
+Double: 64 %lf
+Char: 8 %c
+String: %s
+8Bit=Byte
+Nibble=4Bit
+
+STD in, out, err
+
+gcc
+-g = debug
+-lm = math
+a.out = default
+PreCompiler-Compiler-Assembler-Linker
+cpp-cc-as-ld
+
+#include, ""=Local <>=Global(GCC)
+(#) = PreProcessor
+stack = non dynamic
+heap = dynamic (MALLOC)
+Variables start with A-Z/_
+Variables end with A-Z/0-9/_
+
+GBD ./exe to start
+r=run <args>
+to break <file:line>/func
+bt/backtrace = find crash
+s = step into
+n = step over
+list = show code
+display x = show x
+No symbol table is loaded. = Forgot -g
+
+All undefined function calls = Assumed int
+Designer of computer arch: John Von Neuman, Processor based off of: Intel 8086
+Cannot return arrays, must return pointer
+Pass by copy
+Strings auto pass as pointers
+Identifiers = Structs,Enums (var names)
+Static = Global to file
+Main structure = int main(int argc, char *argv[]){} - argc = # of args, argv = array of args
+
+dereference/value = *x
+address = &x
+pointer casting = (int *)x 
+To get X bytes of a pointer: *(uintX_t *)p 
+    p = pointer, uintX_t = type(uint8_t)
+EX: uint64_t = 64 bits = 8 bytes = 16 nibbles
+
+
+scope = legal to use names
+lifetime = time in memory
+int x[10]; = 10 ints array
+int *x = malloc(10 * sizeof(int )); = dynamic 10 int array
+
+MakeFile Parts: Target, Dependencies, Commands, Rule
+Only runs when dependency>target.
+
+If last bash command was good, if [[ $? -eq 0 ]]; then  
+First line = The path to the interpreter. (chmod +x <file> to go)
+
+| = C OR statement
+&& = C and statement
+^ = C xor statement
