@@ -1,3 +1,5 @@
+- [Go back](../README.md)
+
 # CS 2505 Exam 2 Notecard
 
 ## 32 bit Registers
@@ -96,3 +98,5 @@ where:
  * **Note:** if a value is missing, it is simply left out of the calc
 
  * leaq: loads the effective address of src into dest
+
+- [Go back](../README.md)
